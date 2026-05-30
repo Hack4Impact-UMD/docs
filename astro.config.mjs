@@ -7,7 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://hack4impact-umd.github.io/docs',
+  site: 'https://hack4impact-umd.github.io',
+  base: '/docs',
   integrations: [
     starlight({
       title: 'H4I-UMD Engineering Docs',
