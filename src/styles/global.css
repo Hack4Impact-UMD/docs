@@ -1,0 +1,72 @@
+@layer base, starlight, rapide, components, utilities, overrides;
+
+@import '@fontsource-variable/karla';
+@import '@fontsource-variable/karla/wght-italic.css';
+@import '@fontsource-variable/rubik';
+@import '@fontsource-variable/rubik/wght-italic.css';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/jetbrains-mono/wght-italic.css';
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@layer overrides {
+
+  /* ── Fonts ──────────────────────────────────────────────────────────── */
+  :root {
+    --sl-font: 'Karla Variable', 'Rubik Variable', sans-serif;
+    --sl-font-mono: 'JetBrainsMono Nerd Font', 'JetBrains Mono Variable', 'Courier New', Courier, monospace;
+  }
+
+  /* ── Accent color: blue (#317fd0 ≈ oklch(59% 0.145 254)) ────────────── */
+
+  /* Dark mode */
+  :root,
+  ::backdrop {
+    --sl-hue-accent: 254;
+    --sl-color-accent-low: oklch(20% 0.04 254);
+    --sl-color-accent: oklch(59% 0.145 254);
+    --sl-color-accent-high: oklch(74% 0.11 254);
+  }
+
+  /* Light mode */
+  :root[data-theme='light'],
+  [data-theme='light'] ::backdrop {
+    --sl-hue-accent: 254;
+    --sl-color-accent-low: oklch(95% 0.02 254);
+    --sl-color-accent: oklch(49% 0.14 254);
+    --sl-color-accent-high: oklch(42% 0.12 254);
+  }
+
+  /* ── Hero mascot: white radial glow masks background-removal halo ───── */
+  .hero img {
+    background: radial-gradient(circle, var(--color-blue-300) 0%, transparent 70%);
+  }
+
+  /* ── Override rapide's hardcoded green on primary buttons ───────────── */
+  .sl-link-button.primary {
+    background-color: var(--sl-color-accent-low);
+    border-color: var(--sl-color-accent);
+    color: var(--sl-color-accent-high);
+
+    &:is(:hover, :focus-visible) {
+      border-color: var(--sl-color-accent-high);
+      color: var(--sl-color-accent-high);
+    }
+  }
+
+  /* ── Override rapide's hardcoded green on banners ───────────────────── */
+  .sl-banner {
+    background-color: var(--sl-color-accent-low);
+    border-color: var(--sl-color-accent);
+    color: var(--sl-color-accent-high);
+
+    a {
+      color: var(--sl-color-accent);
+
+      &:is(:hover, :focus-visible) {
+        color: var(--sl-color-accent-high);
+      }
+    }
+  }
+}

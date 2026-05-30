@@ -1,40 +1,36 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Hack4Impact UMD Engineering
+description: Engineering documentation for Hack4Impact UMD — standards, guides, and references for TLs and engineers.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Standards, guides, and references for H4I-UMD TLs and engineers.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/terra.png
   actions:
-    - text: Example Guide
+    - text: Browse Docs
       link: /guides/example/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: GitHub
+      link: https://github.com/hack4impact-umd
+      icon: github
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## What's Inside
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Guides" icon="open-book">
+		Step-by-step walkthroughs for onboarding, deployment, and common engineering workflows.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Reference" icon="document">
+		API references, architecture overviews, and technical specifications for our projects.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Contributing" icon="pencil">
+		How to open PRs, write good commit messages, and get code reviewed on H4I-UMD projects.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Standards" icon="setting">
+		Coding conventions, tooling configs, and the decisions behind our stack choices.
 	</Card>
 </CardGrid>
