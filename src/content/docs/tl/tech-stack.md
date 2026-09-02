@@ -26,6 +26,12 @@ These are general suggestions from past experience. Each project has different c
 
 A collection of frameworks, libraries, and services that might be a good fit based on experience from past H4I projects.
 
+### Package Managers
+
+Prefer [`pnpm`](https://pnpm.io). It provides greater security protections compared to `npm` and has first-class monorepo support with workspaces. It's also [faster](https://pnpm.io/motivation#boosting-installation-speed). 
+
+You can just replace `npm` with `pnpm` when writing commands and it'll just work most of the time.
+
 ### Backend Solutions
 
 Your backend will usually need to provide four main services: Compute, Database, Hosting, and Storage.
