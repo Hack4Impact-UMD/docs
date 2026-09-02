@@ -44,3 +44,17 @@ E2E tests can uncover issues that unit tests miss, usually at the boundary betwe
 
 1. [ArkType](https://arktype.io/): newer option that's fast with a familiar TypeScript like syntax
 2. [Zod](https://zod.dev/): Tried and tested
+
+## Local Dev
+
+Make sure you have an easy to use local development environment. Your local dev environment should be completely disconnected from the deployed version of your app. Ideally, you should be able to spin it up with just one command (`pnpm dev`).
+
+For Firebase, this means you should make use of the Firebase emulators. Ensure that when run locally, your app automatically connects to the emulators.
+
+## Test Data
+
+As your app grows, you'll need to test on a growing set of user flows, states, and use cases. Manually reproducing these cases each time is time consuming and prone to error. Instead, you should invest time (or tokens) in creating some tooling to generate test data for you. Libraries like [faker](https://github.com/faker-js/faker) and the [flame](https://github.com/rk234/flame-cli) CLI make this easier.
+
+For an example, see the seed scripts in the [KFK repo](https://github.com/Hack4Impact-UMD/kfk-gift-registry/tree/main/scripts).
+
+This greatly accelerates your development process allowing you to iterate faster and can be reused for automated testing.
