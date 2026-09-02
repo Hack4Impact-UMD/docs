@@ -34,6 +34,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { slug: 'engineering/best-practices' },
+            { slug: 'engineering/writing-react' },
           ],
         },
         // {
