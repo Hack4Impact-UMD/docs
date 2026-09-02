@@ -1,9 +1,18 @@
 ---
-title: Best Practices
+title: General Best Practices
 description: Suggestions to make your team more productive
 ---
 
 These are a collection of engineering best practices to make your team more productive and build reliable apps. Some of these may be opinionated or not relevant to your project's context. Take them as suggestions and feel free to contribute your thoughts as well!
+
+## Architecture
+
+At a high level:
+
+* **Your frontend should be a thin client.** Ideally, your frontend code exists to query the backend, hold local authentication state, and do minimal processing on the data it fetches. **Your frontend should never have direct database access**. Firestore [security](https://env.fail/posts/firewreck-1/) rules are limited, prone to errors, and it is simply bad practice. No serious production web application does this for good reason.
+* **Your backend should handle the core logic of the app.** Your backend must handle requests from the frontend, validate any data received, interact with the database, and verify authentication. It is the central source of truth.
+
+Mixing these responsibilities leads to less maintainable and buggy code (speaking from experience).
 
 ## CI Checks
 
