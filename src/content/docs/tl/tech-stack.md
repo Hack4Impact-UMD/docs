@@ -16,7 +16,7 @@ When selecting technologies and services for your app, it's good to keep these t
 
 1. **Support:** Well-supported projects with an established user-base will make your developer experience easier. You'll be more likely to find documentation or resources from people who have encountered similar issues. New technologies may have a lack of resources, and are less likely to work well with AI tools.
 
-1. **Typesafety**: Prioritize libraries and frameworks with first-class TypeScript support. Strive for end-to-end typesafety across your frontend and backend when possible as well. Typesafe libraries will provide a superior developer experience (better autocomplete in your ID and type hints)and make your code more reliable. The more you can verify at build time, the less likely you are to miss bugs.
+1. **Typesafety**: Prioritize libraries and frameworks with first-class TypeScript support. Strive for end-to-end typesafety across your frontend and backend when possible as well. Typesafe libraries will provide a superior developer experience (better autocomplete in your editor and type hints)and make your code more reliable. The more you can verify at build time, the less likely you are to miss bugs.
 
 1. **Team Familiarity**: Try to find technologies that you and your team are familiar with. This will make you a better resource when issues come up, and reduce the time it takes for engineers to ramp up. **This does not mean you should never pick new tools**. Learning new stuff is a constant in software engineering (and pretty fun!). Being able to pick things up quickly will serve your team well in the future. As always, weigh the tradeoffs.
 
