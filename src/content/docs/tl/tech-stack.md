@@ -79,6 +79,12 @@ Vercel's full-stack React framework. Has been around much longer than TanStack, 
 
 ### Frontend
 
+#### Component Libraries
+
+[shadcn](https://ui.shadcn.com/) strikes a good balance of customizability and ease of use. Feel free to look at other libraries too if they better fit your needs, but verify they are compatible with the rest of your stack.
+
+As a rule of thumb, prefer creating or using standard shared components for major UI elements to enforce consistency and reduce duplication in your codebase.
+
 #### Data Fetching & State Management
 
 Always use [TanStack Query](https://tanstack.com/query). There's rarely a good reason to write data fetching logic yourself.
