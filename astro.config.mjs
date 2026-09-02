@@ -16,16 +16,37 @@ export default defineConfig({
       customCss: ['./src/styles/global.css'],
       sidebar: [
         {
-          label: 'Guides',
+          label: 'Overview',
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
+            { slug: 'welcome' },
           ],
         },
         {
-          label: 'Reference',
-          items: [{ autogenerate: { directory: 'reference' } }],
+          label: 'Tech Lead Resources',
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { slug: 'tl/tech-stack' },
+          ],
         },
+        {
+          label: 'General Engineering Resources',
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { slug: 'engineering/best-practices' },
+          ],
+        },
+        // {
+        //   label: 'Guides',
+        //   items: [
+        //     // Each item here is one entry in the navigation menu.
+        //     { slug: 'guides/example' },
+        //   ],
+        // },
+        // {
+        //   label: 'Reference',
+        //   items: [{ autogenerate: { directory: 'reference' } }],
+        // },
       ],
       plugins: [starlightThemeRapidePlugin()]
     }),
