@@ -23,6 +23,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { slug: 'welcome' },
+            { slug: 'contributing' },
           ],
         },
         {
