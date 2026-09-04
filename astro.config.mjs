@@ -31,7 +31,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { slug: 'tl/tech-stack' },
-            { slug: 'guides/starting-a-new-project' },
+            { slug: 'tl/architecture-decisions' },
           ],
         },
         {
