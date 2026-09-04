@@ -21,7 +21,7 @@ Mixing these responsibilities leads to less maintainable and buggy code (speakin
 
 PRs should represent self-contained units of work. Smaller PRs make reviewing easier and more effective. Meaningfully reviewing 1k+ line PRs is almost never feasible.
 
-When possible, use and encourage [stacked PRs](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests). Stacked PRs let you split up large code changes into a chain of smaller, dependent PRs you can review and merge independently. For example, if you're writing a signup page you can split up the stack like this:
+When possible, use and encourage [stacked PRs](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests). Stacked PRs let you split up large code changes into a chain of smaller, dependent PRs you can review and merge independently. Each PR in the stack builds on top of the changes from the PRs below it. For example, if you're writing a signup page you can split up the stack like this:
 
 1. PR#1: Add backend functionality for sign up with tests (bottom of the stack)
 2. PR#2: Create the frontend for the sign up page
