@@ -14,6 +14,9 @@ export default defineConfig({
       title: 'H4I-UMD Engineering Docs',
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/hack4impact-umd' }],
       customCss: ['./src/styles/global.css'],
+      components: {
+        PageTitle: './src/components/PageTitle.astro',
+      },
       sidebar: [
         {
           label: 'Overview',

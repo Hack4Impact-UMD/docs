@@ -1,6 +1,9 @@
 ---
 title: Choosing a Tech Stack
 description: What to prioritize and some suggested technologies
+authors:
+  - name: Ramy Kaddouri
+    url: https://github.com/rk234
 ---
 
 > *TLDR*: See the [new project template repo](https://github.com/Hack4Impact-UMD/vite-trpc-firebase-template) for a concrete example of these suggestions. Feel free to use it as is, make changes, or make your own stack! It's a minimal template designed to help you get started faster without worrying about boilerplate.

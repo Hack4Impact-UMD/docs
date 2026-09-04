@@ -1,6 +1,9 @@
 ---
 title: Writing Better React
 description: Tips for cleaner, idiomatic, and correct React code
+authors:
+  - name: Ramy Kaddouri
+    url: https://github.com/rk234
 ---
 
 > *TLDR:* Avoid `useEffect` unless absolutely necessary, follow rules of hooks, make components that compose, create reusable hooks for common logic.

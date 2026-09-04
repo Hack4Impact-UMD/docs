@@ -1,6 +1,9 @@
 ---
 title: General Best Practices
 description: Suggestions to make your team more productive
+authors:
+  - name: Ramy Kaddouri
+    url: https://github.com/rk234
 ---
 
 These are a collection of engineering best practices to make your team more productive and build reliable apps. Some of these may be opinionated or not relevant to your project's context. Take them as suggestions and feel free to contribute your thoughts as well!

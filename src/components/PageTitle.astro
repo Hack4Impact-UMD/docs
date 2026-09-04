@@ -1,0 +1,45 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+const { authors } = Astro.locals.starlightRoute.entry.data;
+---
+
+<Default><slot /></Default>
+{
+	authors && (
+		<p class="authors">
+			{authors.length > 1 ? 'Authors' : 'Author'}:{' '}
+			{authors.map(({ name, url }, i) => (
+				<>
+					{i > 0 && ', '}
+					{url ? (
+						<a href={url} data-pagefind-filter="author" target="_blank" rel="noreferrer noopener">
+							{name}
+						</a>
+					) : (
+						<span data-pagefind-filter="author">{name}</span>
+					)}
+				</>
+			))}
+		</p>
+	)
+}
+
+<style>
+	.authors {
+		padding: 0;
+		margin-top: 0.5rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+
+	.authors a {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
+	}
+
+	.authors a:is(:hover, :focus-visible) {
+		color: var(--sl-color-white);
+	}
+</style>
