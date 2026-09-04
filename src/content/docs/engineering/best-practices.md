@@ -17,6 +17,19 @@ At a high level:
 
 Mixing these responsibilities leads to less maintainable and buggy code (speaking from experience).
 
+## PRs
+
+PRs should represent self-contained units of work. Smaller PRs make reviewing easier and more effective. Meaningfully reviewing 1k+ line PRs is almost never feasible.
+
+When possible, use and encourage [stacked PRs](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests). Stacked PRs let you split up large code changes into a chain of smaller, dependent PRs you can review and merge independently. For example, if you're writing a signup page you can split up the stack like this:
+
+1. PR#1: Add backend functionality for sign up with tests (bottom of the stack)
+2. PR#2: Create the frontend for the sign up page
+3. PR#3: Integrate the frontend with the backend (top of the stack)
+
+Splitting up a task this way makes reviews easier. Each PR now encapsulates only a small portion of the work, reducing the burden on reviewers and giving them better context on the changes.
+
+
 ## CI Checks
 
 CI is a great way to enforce automated quality and correctness checks on PRs. CI checks reduce review burden and give immediate feedback. Some good checks include:
@@ -70,3 +83,4 @@ As your app grows, you'll need to test on a growing set of user flows, states, a
 For an example, see the seed scripts in the [KFK repo](https://github.com/Hack4Impact-UMD/kfk-gift-registry/tree/main/scripts).
 
 This greatly accelerates your development process allowing you to iterate faster and can be reused for automated testing.
+
