@@ -8,6 +8,8 @@ authors:
 
 Contributions are welcome and encouraged. If you find issues, want to add new content, or have suggestions feel free to open a PR or issue on the [GitHub repo](https://github.com/Hack4Impact-UMD/docs).
 
+These docs are built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). Refer to the documentation when making contributions.
+
 :::note
 **All content contributions must be human written**. Documentation should be a source of truth for both humans and LLMs. Using LLM output dilutes its value and indicates a lack of respect for the reader.
 :::
