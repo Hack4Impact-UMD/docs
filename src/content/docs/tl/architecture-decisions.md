@@ -116,7 +116,7 @@ That said, you should still make the tradeoff consciously.
 - you expect heavy reporting or analytics requirements
 - your team would benefit more from SQL tooling and migrations
 
-This is why `tech-stack.md` emphasizes tradeoffs rather than one universal answer.
+This is why [Choosing a Tech Stack](/docs/tl/tech-stack) emphasizes tradeoffs rather than one universal answer.
 
 ## Complexity: when to accept it and when to avoid it
 
@@ -137,6 +137,8 @@ Bad complexity usually:
 - makes onboarding harder without a clear payoff
 
 A good tech lead is not the person who chooses the simplest stack at all costs. It is the person who chooses complexity deliberately.
+
+See [simple is not small](https://jyn.dev/simple-is-not-the-same-as-small/).
 
 ## How to document decisions
 
