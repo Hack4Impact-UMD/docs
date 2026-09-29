@@ -5,6 +5,9 @@ lastUpdated: 2026-09-29
 authors:
   - name: Ramy Kaddouri
     url: https://github.com/rk234
+
+  - name: Hita Thota
+    url: https://github.com/spoofle
 ---
 
 *TLDR*: Use AI responsibly. Ensure you understand, review, and test generated code. Ensure that the generated code is as simple, concise, and idiomatic as possible. Increasingly you'll be tasked with reviewing AI output. Knowing the difference between good code and bad code requires experience writing code, often bad code, yourself. Investing time in this learning process will make you a better and more productive engineer.
