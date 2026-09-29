@@ -40,6 +40,7 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             { slug: 'engineering/best-practices' },
             { slug: 'engineering/writing-react' },
+            { slug: 'engineering/vibe-coding' },
           ],
         },
         // {
