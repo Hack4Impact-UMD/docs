@@ -76,7 +76,7 @@ Without a means to verify that changes were correct and did not introduce regres
 ## Security and privacy
 
 * **Never paste secrets into a prompt.** API keys, service account files, `.env` contents, database URLs, and any real user data stay out of chat windows and agent sessions. Agents can read files in your repo, so keep secrets out of the repo too (use `.gitignore` and your platform's secret manager).
-* **Watch for hallucinated packages.** Models invent plausible library names, and attackers register those names on npm and PyPI with malicious code ("slopsquatting"). Before installing any dependency an agent suggests, confirm it exists, is actively maintained, and is the package you think it is. Check the repo, the download count, and the publish date.
+* **Watch for hallucinated packages.** Models invent plausible library names, and attackers register those names on npm and PyPI with malicious code. Before installing any dependency an agent suggests, confirm it exists, is actively maintained, and is the package you think it is. Check the repo, the download count, and the publish date.
 * **Treat some generated code as high-risk.** Anything touching authentication, authorization, user input handling, SQL or Firestore queries, file paths, or shell commands gets a closer read than the rest of the diff. These are the places where a subtle mistake becomes a vulnerability.
 * **Respect licensing and IP rules.** Check with your tech lead about any restrictions from the nonprofit you're working with. Some partners have rules about AI tools or about where their data can be sent. Don't paste a partner's proprietary code or documents into a third-party tool without confirming that's allowed.
 
