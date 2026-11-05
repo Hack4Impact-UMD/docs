@@ -41,6 +41,7 @@ export default defineConfig({
             { slug: 'engineering/best-practices' },
             { slug: 'engineering/writing-react' },
             { slug: 'engineering/vibe-coding' },
+            { slug: 'engineering/elephant-goldfish' },
           ],
         },
         // {

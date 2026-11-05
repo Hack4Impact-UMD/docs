@@ -1,0 +1,85 @@
+---
+title: Elephant - Goldfish
+description: A new way of vibecoding with the all knowing and the forgetful
+lastUpdated: 2026-10-28
+authors:
+  - name: Chase Fournier
+    url: https://github.com/chase-fournier
+---
+
+import CoreLoop from '../../../assets/egm-core-loop.svg';
+
+*TLDR*: The elephant-goldfish model is a way of "vibe coding," or agentic software engineering, that uses a single "elephant" chat with all the context to write the first drafts and PRDs, then uses "goldfish" with almost no context to poke holes in the plan. This model is hard to use well without taking the time to learn each step.
+
+## Overview
+
+What if you paired an AI agent that remembers everything with one that remembers nothing, and let their disagreements highlight the gaps in your code? With any luck, this also saves a significant number of tokens.
+
+## The issue with the common approach
+
+When you spend an afternoon with your agent, it gets extremely knowledgeable about your project, likely more than you are. It knows every file, decision, and shortcut you have guided it to make. It can even remember this across chats if you follow the LLM Wiki model (I will cover this model of programming in a future article). You might trust that, since it knows so much, it will make the best decisions, but it has a large blind spot: the agent that shaped the plan is the worst one to judge whether it holds up. This closely mirrors a human problem: the person who built the system is often the least likely to see the obvious flaw, because they are too passionate about it.
+
+The [elephant-goldfish](https://github.com/google/elephant-goldfish-model) model of development is a recently open-sourced workflow from Google that builds on [Dave Rensin's essay](https://egm.dev/). It drafts the specs with a deep-context agent, then stress-tests them with zero-context sub-agents.
+
+## Meet the team
+
+How does EGM split the work?
+
+The elephant sees your project, requirements, past features, and earlier decisions. It's built to explore the problem and draft the spec to solve it.
+
+The goldfish sees only the document the elephant created, plus some light instructions on how to use the repo, such as its architecture or how it boots. It hunts for assumptions and blurry requirements, and finds risky steps that might lead to issues.
+
+You, of course, know the overall goal and can tell the model when it creates something misaligned. You are there to settle who is right when they disagree, approve the final design, and decide exactly what gets built.
+
+## How to use it
+
+The core loop is three commands: brainstorm, draft, review. You can use the features however you see fit; building with AI is not a solved problem, and right now the best workflow is personal to each person.
+
+<CoreLoop />
+
+*Diagram created with Claude.*
+
+The goldfish are mainly used in the brainstorming phase to challenge the general idea before anything is committed to, and then again to review the PRD draft. At H4I, you could likely skip the brainstorming phase if a Tech Lead delivers a detailed enough sprint spec, and move straight to poking holes in the plan.
+
+| Skill | Use |
+| --- | --- |
+| `/egm-brainstorm` | Brainstorm a new idea against a six-agent goldfish swarm to form a robust concept |
+| `/egm-draft` | Turn your brainstorm into a real design doc with the elephant |
+| `/egm-review` | Have brand-new goldfish review the document to check that the plan is clear enough to code from |
+| `/egm-resolve` | Work through the review findings and decide which changes need to be made |
+| `/egm-review-loop` | Run review agents for a specific review job |
+| `/egm-bootstrap` | Generate `.md` files bottom-up so the elephant can easily navigate the repo (you can use an LLM wiki instead) |
+| `/egm-drift-report` | Check whether the docs match new or changed code |
+
+## Why design so much first?
+
+The big idea behind EGM is simple: agents can write code faster than people can review it, so the spec becomes the thing to focus on and get right. A gap in a two-page doc is much easier for you and the agent to fix early than one buried in thousands of lines of code.
+
+What keeps everything honest:
+
+- The goldfish's fresh eyes can't be talked out of a problem, so they give you an honest read.
+- The docs have to stand alone. This system catches errors in the docs sooner, which keeps the whole repo more honest and less likely to trip up another agent or engineer.
+- You are forced to make the key design decisions that settle critical questions about the repo.
+
+This shouldn't be used for everything; a small bug fix doesn't need a whole planning doc. I've also run into issues using it to start a new project. It's designed around adding features, not starting a repo.
+
+## Download instructions
+
+```bash
+# Claude Code
+claude plugin marketplace add google/elephant-goldfish-model
+claude plugin install egm@egm
+
+# Codex
+codex plugin marketplace add google/elephant-goldfish-model
+codex plugin add egm@egm
+
+# Antigravity
+agy plugin install https://github.com/google/elephant-goldfish-model
+```
+
+## Sources
+
+- [google/elephant-goldfish-model on GitHub](https://github.com/google/elephant-goldfish-model)
+- [EGM setup and workflow guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/getting_started.md)
+- [Dave Rensin, Elephants, Goldfish, and the New Golden Age of Software Engineering](https://drensin.medium.com/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874)
